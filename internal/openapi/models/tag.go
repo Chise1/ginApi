@@ -1,4 +1,4 @@
-package openapi
+package models
 
 type Tag struct {
 	Name         string                `json:"name"`         //	REQUIRED. The name of the tag.

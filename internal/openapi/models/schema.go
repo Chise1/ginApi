@@ -1,4 +1,4 @@
-package openapi
+package models
 
 type Discriminator struct {
 	PropertyName string            `json:"propertyName" gA:"need"` //	REQUIRED. The name of the property in the payload that will hold the discriminator value.

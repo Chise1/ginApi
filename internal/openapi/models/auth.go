@@ -1,4 +1,4 @@
-package openapi
+package models
 
 type OAuthFlowImplicit struct {
 	RefreshUrl       string            `json:"refreshUrl"`

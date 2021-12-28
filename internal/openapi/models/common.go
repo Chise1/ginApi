@@ -1,4 +1,4 @@
-package openapi
+package models
 
 type Example struct {
 	Summary       string      `json:"summary"`       //Short description for the example.

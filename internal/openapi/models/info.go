@@ -1,4 +1,4 @@
-package openapi
+package models
 
 type Contact struct {
 	Name  string `json:"name"`  //The identifying name of the contact person/organization.

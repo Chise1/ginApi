@@ -1,4 +1,4 @@
-package openapi
+package models
 
 type HTTPBase struct {
 	Type        SecuritySchemeType `json:"type"`

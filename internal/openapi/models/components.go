@@ -1,4 +1,4 @@
-package openapi
+package models
 
 type Components struct {
 	Schemas         map[string]Schema      `json:"schemas"`

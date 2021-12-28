@@ -1,4 +1,4 @@
-package openapi
+package models
 
 type OpenAPI struct {
 	Openapi      string                      `json:"openapi"`      //REQUIRED. This string MUST be the version number of the OpenAPI Specification that the OpenAPI document uses. The openapi field SHOULD be used by tooling to interpret the OpenAPI document. This is not related to the API info.version string.

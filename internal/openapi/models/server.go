@@ -1,4 +1,4 @@
-package openapi
+package models
 
 type ServerVariable struct {
 	Enum        []string `json:"enum"`        //An enumeration of string values to be used if the substitution options are from a limited set. The array MUST NOT be empty.

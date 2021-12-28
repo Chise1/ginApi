@@ -1,4 +1,4 @@
-package openapi
+package models
 
 type ExternalDocumentation struct {
 	Description string `json:"description"` //A description of the target documentation. CommonMark syntax MAY be used for rich text representation.

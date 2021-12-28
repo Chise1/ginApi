@@ -1,4 +1,4 @@
-package openapi
+package models
 
 type Reference struct {
 	Ref string `json:"$ref"` //REQUIRED. The reference identifier. This MUST be in the form of a URI.
