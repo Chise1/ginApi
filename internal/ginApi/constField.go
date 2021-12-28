@@ -2,6 +2,7 @@ package ginApi
 
 import (
 	"github.com/gin-gonic/gin"
+	"net/http"
 	"reflect"
 )
 
@@ -132,4 +133,13 @@ func Iter(f interface{}) func(ctx *gin.Context) {
 			}
 		}
 	}
+}
+func Docs(r *gin.Engine) {
+	r.LoadHTMLGlob("templates/*")
+	r.GET("/index", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "docs.tmpl", gin.H{})
+	})
+	r.GET("/openapi.json", func(context *gin.Context) {
+		context.String(200, "{\"openapi\":\"3.0.2\",\"info\":{\"title\":\"FastAPI\",\"version\":\"0.1.0\"},\"paths\":{\"/user/{Name}\":{\"get\":{\"summary\":\"Read Root\",\"operationId\":\"read_root_user__Name__get\",\"parameters\":[{\"required\":true,\"schema\":{\"title\":\"Name\",\"type\":\"string\"},\"name\":\"Name\",\"in\":\"path\"}],\"responses\":{\"200\":{\"description\":\"Successful Response\",\"content\":{\"application/json\":{\"schema\":{}}}},\"422\":{\"description\":\"Validation Error\",\"content\":{\"application/json\":{\"schema\":{\"$ref\":\"#/components/schemas/HTTPValidationError\"}}}}}}}},\"components\":{\"schemas\":{\"HTTPValidationError\":{\"title\":\"HTTPValidationError\",\"type\":\"object\",\"properties\":{\"detail\":{\"title\":\"Detail\",\"type\":\"array\",\"items\":{\"$ref\":\"#/components/schemas/ValidationError\"}}}},\"ValidationError\":{\"title\":\"ValidationError\",\"required\":[\"loc\",\"msg\",\"type\"],\"type\":\"object\",\"properties\":{\"loc\":{\"title\":\"Location\",\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"msg\":{\"title\":\"Message\",\"type\":\"string\"},\"type\":{\"title\":\"Error Type\",\"type\":\"string\"}}}}}}")
+	})
 }
