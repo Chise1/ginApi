@@ -8,6 +8,11 @@ import (
 type InUserName struct {
 	Name string `gA:"param"`
 }
+
+func (n InUserName) ValidateName(name string) {
+
+}
+
 type OutUserName struct {
 	User  string
 	Value string
