@@ -1,8 +1,8 @@
 package openapi
 
-import "github.com/ginApi/internal/openapi/models"
+import "github.com/ginApi/openapi/models"
 
-//默认的报错结构
+// DefaultValidationCompents 默认的报错结构
 func DefaultValidationCompents() map[string]models.Schema {
 	return map[string]models.Schema{
 		"HTTPValidationError": {
